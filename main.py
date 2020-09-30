@@ -29,11 +29,11 @@ df = pd.DataFrame(snippetdata["items"][0]["snippet"],index=[0])
 print(df)
 
 # Writes the dataframe to an Excel file
-writer = pd.ExcelWriter('C:/Users/zsk405/PycharmProjects/Youtube/ChannelInfo.xlsx', engine='openpyxl')
+writer = pd.ExcelWriter(filepath, engine='openpyxl')
 df.to_excel(writer)
 writer.save()
 
 # Writes the dataframe to a CSV file
-df.to_csv("C:/Users/zsk405/PycharmProjects/Youtube/ChannelInfo.csv",sep=',',index=False)
+df.to_csv(filepath,sep=',',index=False)
 
 
